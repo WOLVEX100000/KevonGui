@@ -1,0 +1,149 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Kevon Hub V1.2", "Ocean")
+
+--Tabs
+
+local Tab1 = Window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("Scripts")
+
+-- Buttons/Windows/Idk
+
+Tab1Section:NewButton("Faizan's Farm", "Enables Faizan's Gui", function()
+
+    local A_1 = game.Players.LocalPlayer.name.." Loaded Faizan's Destroyer"-----message here
+
+local A_2 = "All"
+
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+
+Event:FireServer(A_1, A_2)
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/SukiScripts/FaizansGui/main/Faizan"), true))()
+
+--creator: Alex And Faizan
+
+--Btw This is V1 Join Our DIscord Server! https://discord.gg/w3mYRWuWRq
+
+end)
+
+Tab1Section:NewButton("Farm", "Enables Farm", function()
+
+    local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.pr.RemoteEvent
+
+game:service'RunService'.RenderStepped:Connect(function()
+
+for i = 450,500 do
+
+Event:FireServer()
+
+end
+
+end)
+
+if Character:FindFirstChild("sword") then
+
+while wait() do
+
+Character.sword.Handle.pr.RemoteEvent:FireServer()
+
+if not Character:FindFirstChild("sword") then
+
+for _,v in pairs(Backpack:GetChildren()) do
+
+Humanoid:EquipTool(v)
+
+end
+
+end
+
+end
+
+end
+
+end)
+
+Tab1Section:NewButton("Dark SS Gui", "GETS GUI", function()
+
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/SukiScripts/DarkDestroyer/main/DarkGui"), true))()
+
+--creator: Suki And Wolve
+
+--Btw This is V2 Join Our DIscord Server! https://discord.gg/w3mYRWuWRq
+
+end)
+
+Tab1Section:NewButton("God Mode", "Say .god", function()
+
+    game.Players.LocalPlayer.Chatted:connect(function(msg)
+
+if string.lower(msg):sub(1) ==".god" then
+
+	game.Players.LocalPlayer.Character.pvp:Destroy()	end
+
+end)
+
+end)
+
+Tab1Section:NewButton("Afk Gui", "Makes You Stay Longer Then 20 Mins", function()
+
+    wait(0.5)local ba=Instance.new("ScreenGui")
+
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+
+ca.TextSize=22;da.Parent=ca
+
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+
+game:service'Players'.LocalPlayer.Idled:connect(function()
+
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+
+end)
+
+local A_1 = game.Players.LocalPlayer.name.." Loaded Kevon's Gui"-----message here
+
+local A_2 = "All"
+
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+
+Event:FireServer(A_1, A_2)
+
+Tab1Section:NewButton("Admin Sword Farm", "Its Way More Faster!", function()
+
+while true do
+
+		wait()
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Admin Sword").Handle.pr.RemoteEvent:FireServer()
+
+end
+
+end)
